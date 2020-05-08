@@ -1,24 +1,24 @@
 Termstats plugin provide term frequency and document frequency for one more more indices specified in request
 
-##Background
+## Background
 This plugin is inspired by jprante's termlist plugin (https://github.com/jprante/elasticsearch-index-termlist) which provides more features.
  I had to develop this plugin because of 
- - performance ( termlist plugin provides ability to filter by temr prefix, which this plugin does not - but that allows to me use more efficient Lucene codepath)
+ - performance ( termlist plugin provides ability to filter by term prefix, which this plugin does not - but that allows to me use more efficient Lucene codepath)
  - elastic versions ( i wanted 7.2.x support)
 
-##Status
+## Status
 At this time , this codebase supports only elasticsearch `7.2.x`. Im adding more tests as well . I plan to migrate to newer versions soon ( PR's welcome)
 
-##Building
+## Building
 ```shell script
-./gradlew test assemble  
+gradle test assemble  
 ```
-##Installing
+## Installing
 ```shell script
 bin/elasticsearch-plugin install file://<path_to_plugin>/es-termstat-7.2.0.zip
 ```
 
-##Usage
+## Usage
 
 Gets top 10 terms in index by term frequency for a specific field in an index.
 
